@@ -65,7 +65,7 @@ export const GameControls: FC<GameControlsProps & ClassNameProps> = ({
                 />
                 <div className="flex relative ml-auto">
                     <GameHold
-                        className="absolute top-0 left-0"
+                        className="absolute top-0 left-0 button-control"
                         keyCode={hold}
                         disabled={!enabled || !holdEnabled}
                         onHold={() => {
@@ -77,6 +77,7 @@ export const GameControls: FC<GameControlsProps & ClassNameProps> = ({
                         disabled={!enabled}
                         keyCodeLeft={rotate_left}
                         keyCodeRight={rotate_right}
+                        className="button-control"
                         onRotateLeft={() =>
                             dispatch(
                                 GameActions.rotate(GamePlayerDirection.LEFT)
@@ -89,7 +90,7 @@ export const GameControls: FC<GameControlsProps & ClassNameProps> = ({
                         }
                     />
                 </div>
-                <GameSettings className="absolute top-0 right-0" />
+                <GameSettings className="absolute top-0 right-0 button-control" />
             </UiThemeProvider>
         </div>
     );

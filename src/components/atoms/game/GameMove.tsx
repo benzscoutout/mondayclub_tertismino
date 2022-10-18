@@ -5,6 +5,7 @@ import {KeyPressed} from '../../particles/nulls/KeyPressed';
 import {Repeater} from '../../particles/nulls/Repeater';
 import {ClassNameProps} from '../../particles/particles.types';
 import {UiButton, UiButtonShape} from '../../particles/ui/UiButton';
+import './game.css';
 
 const SKIP_SECOND_REPEAT = 1;
 
@@ -54,7 +55,8 @@ export const GameMove: FC<GameMoveProps & ClassNameProps> = ({
                 className={classNames(
                     'items-center justify-center',
                     className,
-                    {'p-4': !large, 'p-5': large}
+                    {'p-4': !large, 'p-5': large},
+                    'button-control'
                 )}
                 preventFocus={true}
                 disabled={disabled}

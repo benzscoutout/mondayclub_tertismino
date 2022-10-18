@@ -7,14 +7,14 @@ import {ClassNameProps} from '../../particles/particles.types';
 export const AppCopyright: FC<ClassNameProps> = ({className}) => {
     return (
         <div className={classNames(className, 'flex text-xs space-x-2')}>
-            <div>Version {environment.version}</div>
+            {/* <div>Version {environment.version}</div>
             <a
                 href={environment.github}
                 className="flex text-primary hover:underline items-center space-x-1"
             >
                 <FaGithub />
                 <span>Source</span>
-            </a>
+            </a> */}
         </div>
     );
 };

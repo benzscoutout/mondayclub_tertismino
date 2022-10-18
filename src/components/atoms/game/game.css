@@ -1,0 +1,20 @@
+
+
+.button-control{
+    background-color: #F7AF31 !important;
+}
+
+.border-game-color{
+    border-color: #F7AF31 !important;
+    box-shadow: 4px 4px 5px #64454B;
+    margin-bottom: 8px;
+}
+
+.nm-inset-gray-100{
+    border-color: #F7AF31 !important;
+    box-shadow: #F7AF31 !important;
+}
+
+.count-down-color{
+    color: #F7AF31 !important;
+}

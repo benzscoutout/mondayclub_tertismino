@@ -14,6 +14,7 @@ import {GameToast} from '../../molecules/game/GameToast';
 import {useUiTheme} from '../../particles/contexts/UiThemeContext';
 import {useDocVisible} from '../../particles/hooks/useDocVisible';
 import {ClassNameProps} from '../../particles/particles.types';
+import '../../atoms/game/game.css';
 
 export const GameEngine: FC<ClassNameProps> = ({className}) => {
     const [loaded, setLoaded] = useState(false);
@@ -55,8 +56,9 @@ export const GameEngine: FC<ClassNameProps> = ({className}) => {
                 className,
                 'flex relative overflow-hidden rounded-lg desktop:p-4 w-full',
                 {
-                    'border border-gray-200 dark:border-gray-600': transparent,
-                    'dark:nm-inset-gray-800 nm-inset-gray-100': !transparent
+                    'border border-gray-200 border-game-color': transparent,
+                    'border-game-color': !transparent,
+                    'dark:nm-inset-gray-800': !transparent
                 }
             )}
         >

@@ -14,7 +14,7 @@ export const AppLogo: FC<AppLogoProps & ClassNameProps> = ({
     speed = 200,
     className
 }) => {
-    const [letters, colors] = useLetters(name, speed);
+    const [letters, colors] = useLetters('MC_TERTIS', speed);
     return (
         <div
             data-testid="app-logo"

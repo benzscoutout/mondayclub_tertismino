@@ -29,7 +29,7 @@ export const GameTimer: FC<GameTimerProps & ClassNameProps> = ({
             data-testid="game-timer"
             className={classNames(
                 className,
-                'flex font-mono items-center justify-center text-9xl'
+                'flex font-mono items-center justify-center text-9xl ml-auto my-auto count-down-color'
             )}
         >
             {counter > 0 ? counter : ''}
@@ -38,5 +38,5 @@ export const GameTimer: FC<GameTimerProps & ClassNameProps> = ({
 };
 
 GameTimer.defaultProps = {
-    count: 3
+    count: 100
 };

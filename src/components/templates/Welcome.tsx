@@ -8,6 +8,7 @@ import {GameActions} from '../../store/game/game-actions';
 import {AppLogo} from '../atoms/app/AppLogo';
 import {AppMenu, AppMenuItem} from '../atoms/app/AppMenu';
 import {AppDarkMode} from '../molecules/app/AppDarkMode';
+import './welcome.css';
 
 export interface WelcomeProps {
     selectStart?: () => number;
@@ -36,7 +37,7 @@ export const Welcome: FC<WelcomeProps> = ({
     }, [startLevel]);
 
     return (
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full bg-control">
             <AppLogo
                 className="mt-auto mb-14"
                 name={environment.brandName.toUpperCase()}

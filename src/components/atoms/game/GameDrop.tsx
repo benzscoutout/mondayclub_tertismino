@@ -34,7 +34,8 @@ export const GameDrop: FC<GameDropProps & ClassNameProps> = ({
                 className={classNames(
                     className,
                     'items-center justify-center',
-                    {'p-4': !large, 'p-5': large}
+                    {'p-4': !large, 'p-5': large},
+                    'button-control'
                 )}
                 disabled={disabled}
                 preventFocus={true}
