@@ -10,13 +10,16 @@ export const GameSoundTracks: FC = () => {
     const sound = useSelector(AppSelectors.sound);
     const soundVolume = useSelector(AppSelectors.soundVolume);
     const soundTracks = useSelector(GameSelectors.soundTracks);
+    const paused = useSelector(GameSelectors.paused);
     const dispatch = useAppDispatch();
 
     return (
         <>
             {sound &&
+                !paused &&
                 soundTracks.map(({id, src}) => (
                     <GameAudio
+                        autoPlay
                         key={id}
                         src={src}
                         volume={soundVolume / 100}

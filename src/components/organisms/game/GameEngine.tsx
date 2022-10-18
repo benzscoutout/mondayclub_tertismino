@@ -21,7 +21,7 @@ export const GameEngine: FC<ClassNameProps> = ({className}) => {
     const [showToast, setShowToast] = useState(false);
     const dispatch = useAppDispatch();
     const visible = useDocVisible();
-
+    const [isRun, setIsRun] = useState(false);
     const starting = useSelector(GameSelectors.starting);
     const running = useSelector(GameSelectors.running);
     const finishing = useSelector(GameSelectors.finishing);
@@ -48,13 +48,17 @@ export const GameEngine: FC<ClassNameProps> = ({className}) => {
         }
     }, [visible, dispatch]);
 
+    const isRunning = () => {
+        setIsRun(true);
+    };
+
     const {transparent} = useUiTheme();
 
     return (
         <div
             className={classNames(
                 className,
-                'flex relative overflow-hidden rounded-lg desktop:p-4 w-full',
+                'flex relative overflow-hidden rounded-lg desktop:p-4 width-grid mx-auto',
                 {
                     'border border-gray-200 border-game-color': transparent,
                     'border-game-color': !transparent,
@@ -63,18 +67,17 @@ export const GameEngine: FC<ClassNameProps> = ({className}) => {
             )}
         >
             <GameGrid />
-            {running && <GameMusic />}
             <GameSoundTracks />
-            {starting && !loaded && (
+            {/* {starting && !loaded && (
                 <GamePreloader
                     className="absolute w-full h-full -m-4"
                     onLoaded={() => setLoaded(true)}
                 />
-            )}
-            {starting && loaded && (
+            )} */}
+            {starting && !loaded && (
                 <GameTimer
                     className="absolute w-full h-full -m-4"
-                    onStart={() => dispatch(GameActions.run())}
+                    onStart={() => dispatch(GameActions.run()) && isRunning()}
                 />
             )}
             {showToast && (
@@ -83,6 +86,7 @@ export const GameEngine: FC<ClassNameProps> = ({className}) => {
                     message={toast!}
                 />
             )}
+            {loaded && <GameMusic />}
             {running &&
                 [restartTicker].map((key) => (
                     <GameTicker

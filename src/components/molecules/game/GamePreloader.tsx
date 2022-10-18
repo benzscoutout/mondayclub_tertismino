@@ -24,7 +24,7 @@ export const GamePreloader: FC<GamePreloaderProps & ClassNameProps> = ({
             data-testid="game-loader"
             className={classNames(
                 className,
-                'flex font-mono items-center justify-center text-2xl'
+                'flex font-mono items-center justify-center text-2xl mx-auto'
             )}
         >
             Loading

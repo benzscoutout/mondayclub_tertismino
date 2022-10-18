@@ -24,7 +24,7 @@ export const Types: Story<StoryProps> = ({glow, ghost}) => {
             {TYPES.map((type, indx) => {
                 return (
                     <div
-                        className="game-grid m-3"
+                        className="m-3 width-grid"
                         style={{gridTemplateColumns: `repeat(5, 1fr)`}}
                         key={indx}
                     >

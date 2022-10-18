@@ -1,7 +1,9 @@
 import {VFC} from 'react';
+import {useSelector} from 'react-redux';
 import {environment} from '../../environment/environment';
 import {GameSelectors} from '../../store/game/game-selectors';
 import {AppLogo} from '../atoms/app/AppLogo';
+import {GameMusic} from '../molecules/game/GameMusic';
 import {GamePieces} from '../molecules/game/GamePieces';
 import {GameControls} from '../organisms/game/GameControls';
 import {GameEngine} from '../organisms/game/GameEngine';
@@ -13,19 +15,11 @@ export interface GameDesktopProps {
 }
 
 export const GameDesktop: VFC<GameDesktopProps> = ({floatControls}) => {
+    const running = useSelector(GameSelectors.running);
     usePageView('/game/desktop');
     return (
         <>
-            <div className="grid grid-cols-desktop gap-4 m-auto">
-                <div></div>
-                <div>
-                    <AppLogo
-                        className="mt-auto mb-14"
-                        name={environment.brandName.toUpperCase()}
-                    />
-                </div>
-                <div></div>
-            </div>
+            <GameMusic />
             <div className="grid grid-cols-desktop gap-4 m-auto">
                 <div className="flex flex-col">
                     <GamePieces

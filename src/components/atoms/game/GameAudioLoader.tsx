@@ -36,7 +36,7 @@ export const GameAudioLoader: FC<GameAudioLoaderProps> = ({
                 <GameAudio
                     key={src}
                     src={src}
-                    autoPlay={false}
+                    autoPlay={true}
                     onLoaded={() => setLoaded(src)}
                 />
             ))}

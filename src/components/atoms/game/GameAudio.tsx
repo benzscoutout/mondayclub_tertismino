@@ -24,18 +24,13 @@ export const GameAudio: FC<GameAudioProps> = ({
 }) => {
     const ref = useRef<HTMLAudioElement>(null);
 
-    useEffect(() => {
-        if (volume) {
-            ref.current!.volume = volume;
-        }
-    }, [ref, volume]);
-
     return (
         <audio
             src={src}
+            preload="auto"
+            playsInline
+            autoPlay
             ref={ref}
-            autoPlay={autoPlay}
-            controls={false}
             loop={Boolean(loop)}
             onEnded={() => onDone && onDone()}
             onCanPlayThrough={() => onLoaded && onLoaded()}

@@ -18,3 +18,27 @@
 .count-down-color{
     color: #F7AF31 !important;
 }
+
+.width-grid{
+    width: 100% !important;
+}
+
+
+
+  @media screen and (max-width: 800px) {
+    .width-grid{
+        width: 80% !important;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .width-grid{
+        width: 100% !important;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .width-grid{
+        width: 90% !important;
+    }
+  }

@@ -10,6 +10,7 @@ import {GameHold} from '../../atoms/game/GameHold';
 import {GameRotate} from '../../atoms/game/GameRotate';
 import {GameSettings} from '../../atoms/game/GameSettings';
 import {GameArrows} from '../../molecules/game/GameArrows';
+import {GameMusic} from '../../molecules/game/GameMusic';
 import {
     UiThemeProvider,
     useUiTheme

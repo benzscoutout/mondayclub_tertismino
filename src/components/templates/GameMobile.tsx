@@ -1,7 +1,9 @@
 import {VFC} from 'react';
+import {useSelector} from 'react-redux';
 import {environment} from '../../environment/environment';
 import {GameSelectors} from '../../store/game/game-selectors';
 import {AppLogo} from '../atoms/app/AppLogo';
+import {GameMusic} from '../molecules/game/GameMusic';
 import {GamePieces} from '../molecules/game/GamePieces';
 import {GameControls} from '../organisms/game/GameControls';
 import {GameEngine} from '../organisms/game/GameEngine';
@@ -9,13 +11,11 @@ import {GameNumbers} from '../organisms/game/GameNumbers';
 import {usePageView} from '../particles/hooks/usePageView';
 
 export const GameMobile: VFC = () => {
+    const running = useSelector(GameSelectors.running);
     usePageView('/game/mobile');
     return (
         <div className="flex flex-col p-4">
-            <AppLogo
-                className="mt-auto mb-14"
-                name={environment.brandName.toUpperCase()}
-            />
+            <GameMusic />
             <GameNumbers className="mx-auto gap-2" reverse={true} />
             <div className="grid grid-cols-mobile gap-2 mx-auto">
                 <div className="flex flex-col">

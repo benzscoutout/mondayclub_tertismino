@@ -8,6 +8,7 @@ import {GameActions} from '../../store/game/game-actions';
 import {AppLogo} from '../atoms/app/AppLogo';
 import {AppMenu, AppMenuItem} from '../atoms/app/AppMenu';
 import {AppDarkMode} from '../molecules/app/AppDarkMode';
+import {GameMusic} from '../molecules/game/GameMusic';
 import './welcome.css';
 
 export interface WelcomeProps {

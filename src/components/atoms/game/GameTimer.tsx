@@ -38,5 +38,5 @@ export const GameTimer: FC<GameTimerProps & ClassNameProps> = ({
 };
 
 GameTimer.defaultProps = {
-    count: 100
+    count: 3
 };

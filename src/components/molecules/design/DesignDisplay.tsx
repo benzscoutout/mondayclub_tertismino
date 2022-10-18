@@ -38,7 +38,7 @@ export const DesignDisplay: FC<DesignDisplayProps & ClassNameProps> = ({
     return (
         <div
             className={classNames(className, 'grid w-full min-w-full', {
-                'game-grid': grid
+                'width-grid': grid
             })}
             style={{gridTemplateColumns: `repeat(${count}, minmax(0, 1fr))`}}
         >

@@ -46,3 +46,6 @@ yarn-error.log*
 # misc
 *.pem
 Thumbs.db
+
+docs/*
+storybook-static/*
