@@ -20,7 +20,7 @@ export const GameDesktop: VFC<GameDesktopProps> = ({floatControls}) => {
     return (
         <>
             <GameMusic />
-            <div className="grid grid-cols-desktop gap-4 m-auto">
+            <div className="grid grid-cols-desktop gap-4 m-auto margin-top-custom">
                 <div className="flex flex-col">
                     <GamePieces
                         reverse={true}

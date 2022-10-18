@@ -22,12 +22,34 @@
 .width-grid{
     width: 100% !important;
 }
+.margin-top-custom{
+    margin-top: 30px;
+}
+
+.controls-mobile{
+
+}
+
+.grid-custom{
+    width: 95%;
+    padding-left: 0px !important;
+    grid-template-columns: 15% 70% 15%;
+}
+
+.rotate-button-control{
+
+}
+
 
 
 
   @media screen and (max-width: 800px) {
     .width-grid{
         width: 80% !important;
+    }
+
+    .margin-top-custom{
+        margin-top: 30px !important;
     }
   }
 
@@ -39,6 +61,17 @@
 
   @media screen and (max-width: 480px) {
     .width-grid{
-        width: 90% !important;
+        width: 88% !important;
+    }
+
+    .controls-mobile{
+        margin-top: auto !important;
+        top: 0;
+        bottom: 30px;
+        height: 20%;
+    }
+
+    .rotate-button-control{
+        margin-top: 70px !important;
     }
   }

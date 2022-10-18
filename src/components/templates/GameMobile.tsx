@@ -17,7 +17,7 @@ export const GameMobile: VFC = () => {
         <div className="flex flex-col p-4">
             <GameMusic />
             <GameNumbers className="mx-auto gap-2" reverse={true} />
-            <div className="grid grid-cols-mobile gap-2 mx-auto">
+            <div className="grid grid-custom gap-2">
                 <div className="flex flex-col">
                     <GamePieces
                         className="p-1"
@@ -36,7 +36,7 @@ export const GameMobile: VFC = () => {
                     />
                 </div>
             </div>
-            <div className="flex absolute bottom-14 left-4 right-4">
+            <div className="flex absolute bottom-14 left-4 right-4 controls-mobile">
                 <GameControls className="w-full" transparent={true} />
             </div>
         </div>

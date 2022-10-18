@@ -5,6 +5,7 @@ import {useUiTheme} from '../../particles/contexts/UiThemeContext';
 import {KeyPressed} from '../../particles/nulls/KeyPressed';
 import {ClassNameProps} from '../../particles/particles.types';
 import {UiButton, UiButtonShape} from '../../particles/ui/UiButton';
+import './game.css';
 
 export interface GameRotateProps {
     disabled?: boolean;
@@ -40,7 +41,7 @@ export const GameRotate: FC<GameRotateProps & ClassNameProps> = ({
     );
 
     return (
-        <div className="flex gap-4 my-auto">
+        <div className="flex gap-4 my-auto rotate-button-control">
             <UiButton
                 data-testid="game-rotate-left"
                 className={btnClass}
