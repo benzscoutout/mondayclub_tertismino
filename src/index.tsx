@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactGA from 'react-ga';
 import {App} from './components/templates/App';
 import {Providers} from './components/templates/Providers';
 import {environment} from './environment/environment';
 import './index.css';
+import ReactGA from 'react-ga4';
 import reportWebVitals from './reportWebVitals';
 
 if (environment.analytics) {

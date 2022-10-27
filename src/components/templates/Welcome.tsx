@@ -10,6 +10,7 @@ import {AppMenu, AppMenuItem} from '../atoms/app/AppMenu';
 import {AppDarkMode} from '../molecules/app/AppDarkMode';
 import {GameMusic} from '../molecules/game/GameMusic';
 import './welcome.css';
+import IMG_CITY from '../../assets/images/city.png';
 
 export interface WelcomeProps {
     selectStart?: () => number;
@@ -43,8 +44,12 @@ export const Welcome: FC<WelcomeProps> = ({
                 className="mt-auto mb-14"
                 name={environment.brandName.toUpperCase()}
             />
-            <AppMenu className="w-44 ml-auto mr-auto" items={menu} />
-            <AppDarkMode className="ml-auto mr-auto mt-5 mb-auto" />
+            <AppMenu
+                className="w-44 ml-auto mr-auto menu-control"
+                items={menu}
+            />
+            <AppDarkMode className="ml-auto mr-auto mt-5 mb-auto menu-control" />
+            <img src={IMG_CITY} className="img-city"></img>
         </div>
     );
 };
