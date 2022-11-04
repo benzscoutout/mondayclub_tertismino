@@ -105,7 +105,7 @@ export const GameFinish: FC<GameFinishProps & ClassNameProps> = ({
                             </> :
                             <>
                                 <div className="font-mono text-center">Your Score</div>
-                                <GameScore rank={rank} score={score} />
+                                <GameScore rank={rank} score={score} name={name} />
                                 {/* <div className="font-mono text-center mt-5">Your Best</div>
                 <GameScore rank={1} score={highScores[0] || 0} /> */}
                             </>

@@ -9,7 +9,7 @@ export const HighScoresDialog: FC<Partial<AppDialogControl>> = ({
 }) => {
     return (
         <AppDialog
-            className="max-w-[12rem]"
+            className=""
             title="High Scores"
             selectOpen={selectOpen}
         >

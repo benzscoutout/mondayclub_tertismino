@@ -5,7 +5,7 @@
 		xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
-		<loc>https://game-tertis.mondayclub.io/</loc>
+		<loc>https://game-tetris.mondayclub.io/</loc>
 		<lastmod>2022-10-27</lastmod>
 		<changefreq>Daily</changefreq>
 		<priority>0.8</priority>
